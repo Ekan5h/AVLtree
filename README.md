@@ -3,7 +3,7 @@ AVL Tree implementation in C++ using classes and templates.
 This tree is a special case of [augmented BST](https://github.com/Ekan5h/AugmentedBST). AVL tree is a self-balancing tree, ie it prevents skewness while the insertion and deletion operation. Height of each subtree rooted at the current node is stored with the current node.  
 For each node:  
 
->*height = 1 + max( height( left\_child ), height( right\_node ) )*
+>*height = 1 + max( height( left\_child ), height( right\_child ) )*
 
 ### Basic Operation
 AVL tree always maintains a loose balance ie the heights of the subtrees on both sides of a node can differ by atmost one.  
