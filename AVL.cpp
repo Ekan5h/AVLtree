@@ -114,14 +114,14 @@ class AVL{
             head->height = 1 + max(height(head->left), height(head->right));
             int bal = height(head->left) - height(head->right);
             if(bal>1){
-                if(x > head->left->key){
+                if(height(head->left) >= height(head->right)){
                     return rightRotation(head);
                 }else{
                     head->left = leftRotation(head->left);
                     return rightRotation(head);
                 }
             }else if(bal < -1){
-                if(x < head->right->key){
+                if(height(head->right) >= height(head->left)){
                     return leftRotation(head);
                 }else{
                     head->right = rightRotation(head->right);
@@ -138,6 +138,7 @@ class AVL{
             if(k < x) return searchUtil(head->right, x);
         }
 };
+/*
 int main(){
     AVL<float> t;
     t.insert(1.3);
@@ -153,3 +154,4 @@ int main(){
     t.remove(7.9);
     t.inorder();
 }
+*/
